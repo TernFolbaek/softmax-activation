@@ -4,9 +4,9 @@
 We begin by definiting the soft maz function:
 The softmax function can be represented as:
 
-\[
+$$
 \text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{n} e^{z_j}}
-\]
+$$
 
 Where:
 

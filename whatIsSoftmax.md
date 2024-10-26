@@ -1,6 +1,6 @@
-## Softmax
+# Softmax
 
-### Define softmax function
+## Define softmax function
 We begin by definiting the soft maz function:
 The softmax function can be represented as:
 
@@ -13,10 +13,10 @@ Where:
 - $e^{z_i}$ represents the exponential of the input.
 - $\sum_{j=1}^{n} e^{z_j}$ is the sum of all exponentials of the elements in the input vector $z$.
 
-### Plot the values
+## Plot the values
 We create a plot function where we plot the output of values which are inserted into our softmax function
 
-### Create Blobs
+## Create Blobs
 We will be creating blobs for our data samples, each blob will be centered around their own specfic coordinates
 
 ## Define Unpreffered Model

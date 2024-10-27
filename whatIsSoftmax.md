@@ -5,9 +5,7 @@ We begin by defining the **softmax** function, which is often used in machine le
 
 The softmax function is defined as:
 
-$$
-\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{n} e^{z_j}}
-$$
+$$\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{n} e^{z_j}}$$
 
 Where:
 - $z_i$ is the $i$-th element of the input vector $z = [z_1, z_2, \ldots, z_n]$.
@@ -20,9 +18,7 @@ The softmax function maps a vector of arbitrary real numbers into a vector of pr
 - It is especially useful for multi-class classification problems where each element of the output vector represents the probability of a specific class.
 - The sum of all probabilities for the output vector is equal to 1:
 
-$$
-\sum_{i=1}^{n} \text{softmax}(z_i) = 1
-$$
+$$\sum_{i=1}^{n} \text{softmax}(z_i) = 1$$
 
 This property makes it ideal for predicting class membership.
 
@@ -32,9 +28,7 @@ To better understand the behavior of the softmax function, we can create a plot 
 1. **Input Range:** Define a range of input values $z$ (e.g., $z = [-3, -2, -1, 0, 1, 2, 3]$).
 2. **Apply Softmax:** Apply the softmax function to this range:
 
-   $$
-   \text{softmax}(z) = \left[ \frac{e^{z_1}}{\sum_{j=1}^{n} e^{z_j}}, \frac{e^{z_2}}{\sum_{j=1}^{n} e^{z_j}}, \ldots, \frac{e^{z_n}}{\sum_{j=1}^{n} e^{z_j}} \right]
-   $$
+   $$\text{softmax}(z) = \left[ \frac{e^{z_1}}{\sum_{j=1}^{n} e^{z_j}}, \frac{e^{z_2}}{\sum_{j=1}^{n} e^{z_j}}, \ldots, \frac{e^{z_n}}{\sum_{j=1}^{n} e^{z_j}} \right]$$
 
 3. **Visualize:** Create a plot of these values to see how the probabilities change. This plot will help illustrate how softmax emphasizes larger input values while diminishing the influence of smaller ones, creating a "winner-takes-all" effect.
 
@@ -44,19 +38,13 @@ We will be creating **blobs** for our data samples, each blob centered around sp
 - Blobs represent clusters of data points that are generated using a distribution (e.g., Gaussian distribution).
 - For each blob, we specify a center and standard deviation:
 
-   $$
-   \text{Blob Center: } \mu = (\mu_x, \mu_y)
-   $$
+   $$\text{Blob Center: } \mu = (\mu_x, \mu_y)e$$
 
-   $$
-   \text{Standard Deviation: } \sigma
-   $$
+   $$\text{Standard Deviation: } \sigmae$$
 
 - Using these parameters, data points are sampled from a normal distribution:
 
-   $$
-   x \sim \mathcal{N}(\mu_x, \sigma), \quad y \sim \mathcal{N}(\mu_y, \sigma)
-   $$
+   $$x \sim \mathcal{N}(\mu_x, \sigma), \quad y \sim \mathcal{N}(\mu_y, \sigma)$$
 
 This step is crucial for visualizing how different models classify data in a multi-class setting.
 
@@ -69,9 +57,7 @@ We will define a model with **3 layers**:
 
 The softmax function in the final layer outputs class probabilities:
 
-   $$
-   \hat{y} = \text{softmax}(Wx + b)
-   $$
+   $$\hat{y} = \text{softmax}(Wx + b)$$
 
 Where:
 - $W$ is the weight matrix of the final layer.
@@ -88,9 +74,7 @@ This preferred model will use a **linear activation** function for the last laye
 
 Using logits (i.e., raw scores) directly helps avoid numerical instability when calculating cross-entropy loss. The loss function internally applies the softmax function for better precision:
 
-   $$
-   \text{Cross-Entropy Loss: } -\sum_{i=1}^{n} y_i \log(\text{softmax}(z_i))
-   $$
+   $$\text{Cross-Entropy Loss: } -\sum_{i=1}^{n} y_i \log(\text{softmax}(z_i))$$
 
    Where:
    - $y_i$ is the true label for class $i$.

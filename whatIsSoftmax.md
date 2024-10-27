@@ -40,7 +40,7 @@ We will be creating **blobs** for our data samples, each blob centered around sp
 
    $$\text{Blob Center: } \mu = (\mu_x, \mu_y)e$$
 
-   $$\text{Standard Deviation: } \sigmae$$
+   $$\text{Standard Deviation: } \sigma$$
 
 - Using these parameters, data points are sampled from a normal distribution:
 
